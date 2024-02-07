@@ -13,7 +13,3 @@
 - Comonent library/ In this case Icons: [Material UI](https://mui.com/)
 - Real-time-communication library: [Socket IO](https://socket.io/)
 - Handling HTTP Requests: [Axios](https://axios-http.com/)
-
-## Main Structure
-
-Link to deployed Chat App: [https://chat-app-8tod.onrender.com/](https://chat-app-8tod.onrender.com/)
