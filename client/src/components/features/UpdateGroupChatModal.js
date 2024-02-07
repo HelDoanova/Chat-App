@@ -52,7 +52,8 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`http://localhost:5000/user`, config);
+      // const { data } = await axios.get(`http://localhost:5000/user`, config);
+      const { data } = await axios.get(`/user`, config);
 
       // Filter users by sequence
       const filteredUsers = data.filter(user => new RegExp(`^${query}`, 'i').test(user.name));
@@ -87,8 +88,10 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
+      // const { data } = await axios.put(
+      //   `http://localhost:5000/chat/rename`,
       const { data } = await axios.put(
-        `http://localhost:5000/chat/rename`,
+        `/chat/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -144,8 +147,10 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
+      // const { data } = await axios.put(
+      //   `http://localhost:5000/chat/groupadd`,
       const { data } = await axios.put(
-        `http://localhost:5000/chat/groupadd`,
+        `/chat/groupadd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -189,8 +194,10 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.put(
-        `http://localhost:5000/chat/groupremove`,
+      // const { data } = await axios.put(
+      //   `http://localhost:5000/chat/groupremove`,
+        const { data } = await axios.put(
+        `/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,

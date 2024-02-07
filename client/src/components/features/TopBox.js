@@ -57,7 +57,8 @@ const TopBox = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`http://localhost:5000/user?search=${encodeURIComponent(search)}`, config);
+      // const { data } = await axios.get(`http://localhost:5000/user?search=${encodeURIComponent(search)}`, config);
+      const { data } = await axios.get(`/user?search=${encodeURIComponent(search)}`, config);
      // Filter 
       const filteredUsers = data.filter(user => new RegExp(`^${search}`, 'i').test(user.name));
 
@@ -86,7 +87,8 @@ const TopBox = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post(`http://localhost:5000/chat`, { userId }, config);
+      // const { data } = await axios.post(`http://localhost:5000/chat`, { userId }, config);
+      const { data } = await axios.post(`/chat`, { userId }, config);
 
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);

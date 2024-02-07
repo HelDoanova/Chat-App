@@ -26,7 +26,8 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5000/user/register/",
+        // "http://localhost:5000/user/register/",
+        "/user/register",
         {
           name,
           email,

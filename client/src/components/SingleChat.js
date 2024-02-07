@@ -19,7 +19,8 @@ import { ChatState } from "../context/ChatProvider";
 
 import Hello from "../animations/hello3.json";
 
-const ENDPOINT = "http://localhost:5000"; 
+// const ENDPOINT = "http://localhost:5000"; 
+const ENDPOINT = "https://chat-app-8tod.onrender.com"; 
 var socket, selectedChatCompare;
 
 
@@ -68,7 +69,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "http://localhost:5000/message",
+          // "http://localhost:5000/message",
+          "/message",
           {
             content: newMessage,
             chatId: selectedChat,
@@ -126,7 +128,8 @@ const typingHandler = (e) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `http://localhost:5000/message/${selectedChat._id}`,
+        // `http://localhost:5000/message/${selectedChat._id}`,
+        `/message/${selectedChat._id}`,
         config
       );
       console.log(data);

@@ -67,7 +67,8 @@ const GroupChatModal = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`http://localhost:5000/user`, config);
+      // const { data } = await axios.get(`http://localhost:5000/user`, config);
+      const { data } = await axios.get(`/user`, config);
 
       // Filter users by sequence
       const filteredUsers = data.filter(user => new RegExp(`^${query}`, 'i').test(user.name));
@@ -108,8 +109,10 @@ const GroupChatModal = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
+      // const { data } = await axios.post(
+      //   `http://localhost:5000/chat/group`,
       const { data } = await axios.post(
-        `http://localhost:5000/chat/group`,
+        `/chat/group`,
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),
