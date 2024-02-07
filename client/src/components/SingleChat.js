@@ -17,6 +17,9 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./features/UpdateGroupChatModal";
 import { ChatState } from "../context/ChatProvider";
 
+import {InputRightElement,InputGroup} from "@chakra-ui/react";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
+
 import Hello from "../animations/hello3.json";
 
 // const ENDPOINT = "http://localhost:5000"; 
@@ -58,8 +61,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     ChatState();
 
     const sendMessage = async (event) => {
-        if (event.key === "Enter" && newMessage) {
-      socket.emit("stop typing", selectedChat._id);
+      if ((event.key === "Enter" || event.type === "click") && newMessage) {
       try {
         const config = {
           headers: {
@@ -251,13 +253,25 @@ useEffect(() => {
               ) : (
                 <></>
               )}
-              <Input
-                variant="filled"
-                bg="#E0E0E0"
-                placeholder="Enter a message.."
-                value={newMessage}
-                onChange={typingHandler}
-              />
+              <InputGroup>
+                <Input
+                  variant="filled"
+                  bg="#E0E0E0"
+                  placeholder="Enter a message.."
+                  value={newMessage}
+                  onChange={typingHandler}
+                />
+                <InputRightElement>
+                  <IconButton
+                    aria-label="Send message"
+                    icon={<ArrowForwardIcon />}
+                    onClick={sendMessage} 
+                    bg="transparent" 
+                    _hover={{ bg: "transparent" }} 
+                    _focus={{ boxShadow: "none" }} 
+                  />
+                </InputRightElement>
+              </InputGroup>
             </FormControl>      
             
           </Box>
