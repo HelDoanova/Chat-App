@@ -3,9 +3,6 @@ import { Badge } from "@chakra-ui/layout";
 
 const UserBadgeItemUpdate = ({ user, handleFunction }) => {
 
-  const badgeColor = admin._id === user._id ? "cyan" : "gray";
-  const isAdmin = admin._id === user._id;
-
   return (
     <Badge
       px={2}
