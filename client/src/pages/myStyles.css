@@ -1,0 +1,88 @@
+.login-container {
+    height: 90vh;
+    width: 90vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-container2 {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.login-text {
+    font-size: 200%;
+    padding-bottom: 20px;
+    color: #ba53ff;
+}
+
+.login-signup {
+    width: 20vh;
+    margin : 10px
+}
+
+.login-signup-button {
+    width: 50%;
+    margin: 20px;
+    background-color: #e7d5f3;
+}
+
+/* CHATPAGE */
+.top-area{
+    display: flex;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    width: 90vw;
+    padding: 5px;
+    border-width: 5px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.sidebar-buttons-right{
+    align-items: right;    
+}
+
+.main-area {
+    background-color: rgb(231, 231, 231);
+    height: 88vh;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.myChats-area {
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatBox-area {
+    flex: 0.7;
+}
+
+.profile-modal{
+    font-size:"40px";
+    display:"flex";
+    justify-content: "center";
+}
