@@ -17,6 +17,7 @@ const UserBadgeItemUpdate = ({ user, handleFunction }) => {
       onClick={handleFunction}
     >
       {user.name}
+      <CloseIcon pl={1} />
     </Badge>
   );
 };
