@@ -2,7 +2,7 @@ import { CloseIcon } from "@chakra-ui/icons";
 import { Badge } from "@chakra-ui/layout";
 import { ChatState } from "../../context/ChatProvider";
 
-const UserBadgeItem = ({ user, handleFunction, admin }) => {
+const UserBadgeItem = ({ userB, handleFunction, admin }) => {
 
   const badgeColor = admin._id === userB._id ? "cyan" : "gray";
   const isAdmin = admin._id === userB._id;
