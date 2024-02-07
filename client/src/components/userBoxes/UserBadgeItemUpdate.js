@@ -1,5 +1,6 @@
 import { CloseIcon } from "@chakra-ui/icons";
 import { Badge } from "@chakra-ui/layout";
+import { ChatState } from "../../context/ChatProvider";
 
 const UserBadgeItemUpdate = ({ user1, handleFunction, admin }) => {
 
