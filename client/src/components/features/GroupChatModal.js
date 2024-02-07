@@ -16,7 +16,7 @@ import {
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { ChatState } from "../../context/ChatProvider";
-import UserBadgeItem from "../userBoxes/UserBadgeItem";
+import UserBadgeItem from "../userBoxes/UserBadgeItemCreate";
 import UserListItem from "../userBoxes/UserListItem";
 import ChatLoading from "../ChatLoading";
 

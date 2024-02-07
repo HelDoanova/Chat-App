@@ -18,7 +18,7 @@ import {
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { ChatState } from "../../context/ChatProvider";
-import UserBadgeItem from "../userBoxes/UserBadgeItem";
+import UserBadgeItem from "../userBoxes/UserBadgeItemUpdate";
 import UserListItem from "../userBoxes/UserListItem";
 
 const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
