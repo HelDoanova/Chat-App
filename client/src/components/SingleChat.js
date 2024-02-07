@@ -19,7 +19,7 @@ import { ChatState } from "../context/ChatProvider";
 
 import Hello from "../animations/hello3.json";
 
-const ENDPOINT = "http://localhost:5000"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+const ENDPOINT = "http://localhost:5000"; 
 var socket, selectedChatCompare;
 
 
