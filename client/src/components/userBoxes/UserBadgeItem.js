@@ -1,10 +1,14 @@
 import { CloseIcon } from "@chakra-ui/icons";
 import { Badge } from "@chakra-ui/layout";
+import { ChatState } from "../../context/ChatProvider";
 
 const UserBadgeItem = ({ user, handleFunction, admin }) => {
 
-  const badgeColor = admin._id === user._id ? "cyan" : "gray";
-  const isAdmin = admin._id === user._id;
+  const badgeColor = admin._id === userB._id ? "cyan" : "gray";
+  const isAdmin = admin._id === userB._id;
+  const { user} = ChatState();
+
+  const isCurrentUser = user._id === userB._id;
 
   return (
     <Badge
@@ -19,10 +23,10 @@ const UserBadgeItem = ({ user, handleFunction, admin }) => {
       cursor="pointer"
       onClick={handleFunction}
     >
-      {user.name}
+      {userB.name}
       {/* {admin && <CloseIcon pl={1} />} */}
       {/* <CloseIcon pl={1} /> */}
-      {!isAdmin && <CloseIcon pl={1} />}
+      {!isAdmin && !isCurrentUser && <CloseIcon pl={1} />}
     </Badge>
   );
 };
